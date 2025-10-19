@@ -1,38 +1,56 @@
-# Bookshelf App Starter Project
+# 📚 Bookshelf App
 
-Ini adalah starter project untuk siswa yang sedang mengerjakan tugas akhir kelas Belajar Membuat Front-End Web untuk Pemula.
+A simple web application for managing your personal reading list.  
+Built using **HTML**, **CSS**, and **JavaScript**, this app allows users to add, search, and organize books into two categories:  
+✅ **Finished Reading** and ⏳ **Unfinished Reading**.
 
-## Ketentuan Pengerjaan Tugas
+---
 
-Untuk mempermudah penilaian submission yang dikirim, Anda perlu memahami ketentuan-ketentuan berikut dalam mengerjakan tugas ini.
+## 🚀 Features
 
-- Anda dilarang mengedit atau menghapus atribut `data-testid` pada elemen-elemen HTML.
-- Ini masih berkaitan dengan poin sebelumnya. Jika Anda memiliki kebutuhan seperti styling elemen dan perlu menambahkan atribut seperti class, itu tidak dilarang selama atribut `data-testid` beserta nilainya tidak diubah atau dihapus.
-- Dalam menampilkan data-data buku, Anda wajib memberikan beberapa atribut pada setiap elemennya.
+### 📝 1. Add New Book
+- Users can input:
+  - Book **title**
+  - **Author**
+  - **Year of publication**
+  - Reading **status** (finished / unfinished)
+- Books will automatically appear in the correct list.
 
-  - `data-bookid`: menampung nilai ID masing-masing buku.
-  - `data-testid`: penanda jenis data buku yang ditampilkan. Berikut daftarnya.
-    - `bookItem`: elemen kontainer yang menampung data-data buku.
-    - `bookItemTitle`: judul buku
-    - `bookItemAuthor`: penulis buku
-    - `bookItemYear`: tahun rilis buku
-    - `bookItemIsCompleteButton`: tombol untuk mengubah kondisi buku dari “Belum selesai dibaca” menjadi “Selesai dibaca” atau sebaliknya.
-    - `bookItemDeleteButton`: tombol untuk menghapus buku.
-    - `bookItemEditButton`: tombol untuk mengubah data buku.
+### 🔍 2. Search Book
+- Users can search for books by **title** using a search bar.
+- The app filters results dynamically as you type.
 
-  Agar pengerjaan tugas lebih mudah, Anda dapat mengikuti templat buku berikut.
+### 🔄 3. Move Between Categories
+- Books can be moved between:
+  - “**Unfinished Reading**” → “**Finished Reading**”
+  - “**Finished Reading**” → “**Unfinished Reading**”
 
-```html
-<div data-bookid="{{ ID_buku }}" data-testid="bookItem">
-  <h3 data-testid="bookItemTitle">{{ judul_buku }}</h3>
-  <p data-testid="bookItemAuthor">Penulis: {{ penulis_buku }}</p>
-  <p data-testid="bookItemYear">Tahun: {{ tahun_rilis_buku }}</p>
-  <div>
-    <button data-testid="bookItemIsCompleteButton">{{ tombol_untuk_ubah_kondisi }}</button>
-    <button data-testid="bookItemDeleteButton">{{ tombol_untuk_hapus }}</button>
-    <button data-testid="bookItemEditButton">{{ tombol_untuk_edit }}</button>
-  </div>
-</div>
-```
+### ❌ 4. Delete Book
+- Users can remove a book permanently from the list.
 
-Selamat mengerjakan dan sukses selalu!
+### 💾 5. Local Storage Support
+- All book data is stored in **Local Storage**, so the list remains available even after the browser is closed or refreshed.
+
+---
+
+## 🧩 Tech Stack
+
+| Technology | Description |
+|-------------|-------------|
+| **HTML5** | Structure and layout |
+| **CSS3** | Styling and design |
+| **JavaScript (ES6)** | Core functionality and DOM manipulation |
+| **LocalStorage API** | Data persistence |
+
+---
+
+## ⚙️ How It Works
+
+1. Fill in the **Add Book Form** with title, author, year, and reading status.  
+2. The book appears in either the *Unfinished Reading* or *Finished Reading* list.  
+3. Use the **Search Bar** to find specific books.  
+4. Click the **Move Button** to change a book’s reading status.  
+5. Click the **Delete Button** to remove a book.  
+6. All changes are automatically saved to Local Storage.
+
+-
